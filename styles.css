@@ -1,0 +1,120 @@
+@font-face {
+   font-family: AvenirNextLTPro-Regular;
+   src: url(fonts/AvenirNextLTPro-Regular.otf);
+}
+
+/* MAIN BODY DIV STYLES */
+
+.main {
+  /* height: 100vh; */
+  /* border: 1px solid black; */
+}
+
+.top-bar {
+  background-color: #9A9B8D;
+  min-height: 50px;
+  border-bottom: 2px solid black;
+}
+
+.top-bar-play {
+  background-color: #9A9B8D;
+  min-height: 150px;
+  padding-left: 30px;
+  padding-top: 95px;
+  vertical-align:bottom;
+  color:#EEEEEE;
+  font-family: AvenirNextLTPro-Regular;
+  font-size: 2em;
+}
+.mid-bar-play {
+  background-color: #ffffff;
+  min-height: 170px;
+}
+
+.bottom-bar {
+  color: white;
+  text-align: left;
+  background-color: #67685A;
+  font-family: AvenirNextLTPro-Regular;
+  font-size: 1.25em;
+  padding: 7px 45px;
+}
+
+.left-main {
+  text-align: center;
+  background-color: #EEEEEE;
+  min-height: 700px;
+}
+
+.right-main {
+  background-image: url(resources/Track.jpg);
+  opacity: .19;
+  background-size: cover;
+  /* height: inherit; */
+}
+.nowPlaying {
+  /* width: 80% */
+  min-height:200px;
+  background-color: #EEEEEE;
+  border:2px solid black;
+  margin:15px 50px;
+}
+.buttonDiv {
+  margin-left: 50px;
+}
+
+#leftTitle {
+  margin-top: 50%;
+}
+
+/* BUTTON STYLE */
+
+.button {
+  font-family: AvenirNextLTPro-Regular;
+  background-color: #34342A;
+  color: #EEEEEE;
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-size: 1.25em;
+}
+.button:hover{
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #34342A;
+  border: 1px solid #34342A;
+}
+
+.submitBtn {
+  color:#EEEEEE;
+  font-family: AvenirNextLTPro-Regular;
+  font-size: 1.25em;
+  background-color: #34342A;
+  border-radius: 5px;
+  padding: 5px 30px;
+  cursor:pointer;
+  margin-right: 15px;
+  margin-bottom: 100px;
+}
+
+#chooseBtn {
+  color:#EEEEEE;
+  font-family: AvenirNextLTPro-Regular;
+  font-size: 1.25em;
+  background-color: #34342A;
+  border-radius: 5px;
+  padding: 5px 30px;
+  cursor:pointer;
+}
+/* TEXT STYLES */
+
+h1 {
+  color:purple;
+  font-family: AvenirNextLTPro-Regular;
+  font-size: 3em;
+}
+h2 {
+  color:#EEEEEE;
+  font-family: AvenirNextLTPro-Regular;
+  font-size: 2em;
+  /* vertical-align: text-bottom; */
+}
