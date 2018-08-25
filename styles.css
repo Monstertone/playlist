@@ -49,9 +49,9 @@
 
 .right-main {
   background-image: url(resources/Track.jpg);
-  opacity: .19;
+  /* opacity: .19; */
   background-size: cover;
-  position: relative;
+  /* position: relative; */
   z-index: -1;
 
   /* height: inherit; */
@@ -72,6 +72,7 @@
 }
 
 .album_container {
+  /* text-align:center; */
   margin: 25px;
   border: 1px solid black;
 }
@@ -138,12 +139,28 @@ h2 {
 
 /* IMAGES */
 
-img {
-  margin-top: 20px;
+.imageTest {
+
+
   display:  block;
+  margin:auto;
+  margin-top: 20px;
   max-width: 240px;
   max-height: 240px;
-  position: relative;
+  /* position: relative; */
+  opacity: 1;
+  /* z-index: 7; */
+}
+
+img {
+
+
+  display:  block;
+  margin:auto;
+  margin-top: 20px;
+  max-width: 240px;
+  max-height: 240px;
+  /* position: relative; */
   opacity: 1;
   /* z-index: 7; */
 }
