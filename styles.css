@@ -5,9 +5,9 @@
 
 /* MAIN BODY DIV STYLES */
 
-.main {
-  /* height: 100vh; */
-  /* border: 1px solid black; */
+.playmain {
+  /* border: 1px solid #67685A; */
+  border: 1px solid #9A9B8D;
 }
 
 .top-bar {
@@ -57,7 +57,7 @@
 
 
 .right-main {
-  background-image: url(resources/Track.jpg);
+  background-image: url(resources/fadedTrack.jpg);
   /* opacity: .19; */
   background-size: cover;
   /* position: relative; */
@@ -114,7 +114,12 @@
   cursor:pointer;
   margin-right: 15px;
   margin-bottom: 100px;
+
 }
+
+
+  button:focus {outline:0;}
+
 
 .submitBtn:hover {
   text-decoration: none;
