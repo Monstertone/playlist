@@ -83,7 +83,7 @@
 .album_container {
   /* text-align:center; */
   margin: 25px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 /* BUTTON STYLE */
@@ -165,12 +165,13 @@ h2 {
 .inlineImg {
   display:inline;
   margin-top: 40px;
-  margin-left: 40px;
+  margin-left: 50px;
   max-width: 100px;
   max-height: 100px;
 }
 .inlineImg:hover {
   cursor:pointer;
+  opacity: .7;
 }
 
 img {
