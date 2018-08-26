@@ -27,8 +27,17 @@
   font-size: 2em;
 }
 .mid-bar-play {
+  display: inline;
   background-color: #ffffff;
   min-height: 170px;
+  width: 600px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+#album-gallery {
+  width:1000px;
 }
 
 .bottom-bar {
@@ -91,6 +100,7 @@
   text-decoration: none;
   background-color: #EEEEEE;
   color: #34342A;
+  transition:ease;
   border: 1px solid #34342A;
 }
 
@@ -152,10 +162,21 @@ h2 {
   /* z-index: 7; */
 }
 
+.inlineImg {
+  display:inline;
+  margin-top: 40px;
+  margin-left: 40px;
+  max-width: 100px;
+  max-height: 100px;
+}
+.inlineImg:hover {
+  cursor:pointer;
+}
+
 img {
 
 
-  display:  block;
+  display: block;
   margin:auto;
   margin-top: 20px;
   max-width: 240px;
