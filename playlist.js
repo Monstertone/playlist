@@ -1,13 +1,11 @@
 window.onload = function(e) {
+
+  // THIS SECTION POPULATES THE ALBUM COVER LIST
+
   var playDiv = document.querySelector('.nowPlaying')
   axios.get('https://lit-fortress-6467.herokuapp.com/object').then(function(response){
 
-    console.log(response);
 
-
-    // console.log(response.data.results[0]['cover_art']);
-
-    // console.log(response.data.results.length);
     let dataLength = response.data.results.length;
     let albGallery = document.querySelector('#album-gallery')
 
@@ -18,7 +16,9 @@ window.onload = function(e) {
            albumMini.setAttribute("id" , response.data.results[i]['id']);
            albumMini.classList.add("inlineImg");
            albGallery.appendChild(albumMini);
-    }
+    };
+
+    // THIS SECTION CREATES THE PLAY LIST
 
     var binArray = [];
 
@@ -27,49 +27,50 @@ window.onload = function(e) {
     let myArr = response.data.results;
 
     myArr.forEach(function(output){
-       // let playDiv = document.querySelector('.nowPlaying')
+
           if (output['id'] == event.target['id']){
-          // console.log(output['artist'] + ': '+ output['title']);
+
           let playText = {};
 
-          // playText = output['artist'] + ': '+ output['title']
-          // playText = output['artist'] output['title']
            playText.artist = output['artist']
            playText.title = output['title']
-          // playDiv.innerHTML = playDiv.innerHTML  + `<p> ${playText}`;
-          playDiv.innerHTML = `${playDiv.innerHTML  + playText.artist +': '+ playText.title}  <BR>`;
-          // playDiv.innerHTML = playDiv.innerHTML  + playText.artist +': '+ playText.title  <BR>
+           playDiv.innerHTML = `${playDiv.innerHTML  + playText.artist +': '+ playText.title}  <BR>`;
            binArray.push(playText.title);
           }
 
        });
 
     })
-          console.log(binArray);
+           // THIS SECTION IS TO SUBMIT THE ALBUM LIST TO THE API
 
               let submitAlbums = document.getElementById('submitBtn')
                 submitAlbums.addEventListener('click', function(){
-                axios.post(`https://lit-fortress-6467.herokuapp.com/post`, {
-                binArray
-                }).then(function(response){
+                  if (binArray.length) {
+                    axios.post(`https://lit-fortress-6467.herokuapp.com/post`, {
+                    binArray
+                    }).then(function(response){
 
-                  console.log(response);
-                });
+                      console.log(response);
+
+                    });
+
+                  } else {
+                      console.log('Nothing to submit!');
+                  }
+
               });
 
-   });
+              // THIS SECTION IS TO CLEAR THE LIST
 
+              let clearList = document.getElementById('clearBtn');
 
+              clearList.addEventListener('click', function(){
 
+                  playDiv.innerHTML = "";
+                  binArray.length=0;
 
+               });
 
-         let clearList = document.getElementById('clearBtn');
+         });
 
-         clearList.addEventListener('click', function(){
-
-             playDiv.innerHTML = "";
-
-          });
-
-
-}
+    }
